@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+
+# setup the virtual environment, if not already setup
+
+if [ ! -d "venv" ]; then
+  echo "setting up virtual environment";
+  virtualenv -p python3 venv;
+  echo "installing requirements"
+  source venv/bin/activate;
+  pip install -r requirements.txt;
+fi
+
+# download GloVe
+
+if [ ! -d "./bin/GloVe" ]; then 
+	echo "downloading GloVe embeddings";
+	echo "this might take a while...";
+
+	curl -L http://www-nlp.stanford.edu/data/glove.6B.zip -o ./bin/glove.6B.zip;
+	unzip ./bin/glove.6B.zip -d ./bin/GloVe;
+	rm ./bin/glove.6B.zip;
+fi 
+
+# activate the venv
+
+echo "activating virtual environment";
+source venv/bin/activate;
+export PYTHONPATH=$(pwd);
+
+export FLASK_APP="./web/api.py";
+export FLASK_DEBUG=1
