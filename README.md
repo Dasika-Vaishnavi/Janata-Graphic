@@ -1,7 +1,7 @@
 # Janata-Graphic
 ![WhatsApp Image 2022-12-10 at 11 29 38](https://user-images.githubusercontent.com/81732369/206835167-95b8ce1b-2e22-416a-876d-5dab59c81d68.jpg)
 
-# Understanding the polical situation in India by tracking the sentiment of Janata
+# Understanding the political situation in India by tracking the sentiment of Janata
 Note : The political sentiment analysis and deep learning models are done using American datasets for easy of obtaining the data and is relavent to the USA's demographic than India's demographic in the current version v.0.1
 ______
 
